@@ -94,15 +94,15 @@ const pieOption = {
   },
   visualMap: {
     show: false,
-    min: 80,
-    max: 600,
+    min: 1,
+    max: 10,
     inRange: {
       colorLightness: [0, 1]
     }
   },
   series: [
     {
-      name: 'Access From',
+      name: '',
       type: 'pie',
       radius: '55%',
       center: ['50%', '50%'],
@@ -122,13 +122,15 @@ const pieOption = {
         length2: 20
       },
       itemStyle: {
-        color: '#c23531',
+        color: '#CB4042',
+        borderColor: 'rgba(255, 255, 255, 0.3)',
         shadowBlur: 200,
-        shadowColor: 'rgba(0, 0, 0, 0.5)'
+        boderWidth:1,
+        shadowColor: 'rgba(255, 255, 255, 0.5)'
       },
       animationType: 'scale',
       animationEasing: 'elasticOut',
-      animationDelay: function (idx) {
+      animationDelay: function () {
         return Math.random() * 200;
       }
     }
